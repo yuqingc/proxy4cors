@@ -28,7 +28,7 @@ app.use('/*', createProxyMiddleware({
   target,
   changeOrigin: true,
   onProxyRes: (proxyRes, req, res) => {
-    console.log(`[${timeText(formatTime(new Date))}] ${statusText(res.statusCode)} ${methodText(req.method)} ${req.url}`)
+    console.log(`[${timeText(formatTime(new Date()))}] ${statusText(proxyRes.statusCode)} ${methodText(req.method)} ${req.url}`)
   }
 }));
 
